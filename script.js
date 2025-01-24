@@ -43,6 +43,7 @@ const userInputBlur = () => {
     if (leftEyePaddingTop === 0) {
       clearInterval(eyePosition);
     }
+    // this code Causes eyes position is the best after blur that type username
     if (leftEyePaddingLeft > 0) {
              leftEye.style.paddingLeft = 0;
              rightEye.style.paddingLeft = 0;
