@@ -36,9 +36,16 @@ const userInputFocus = () => {
 
 const userInputBlur = () => {
   console.log("userInputBlur");
+ 
+  
+  
   let eyePosition = setInterval(() => {
     if (leftEyePaddingTop === 0) {
       clearInterval(eyePosition);
+    }
+    if (leftEyePaddingLeft > 0) {
+             leftEye.style.paddingLeft = 0;
+             rightEye.style.paddingLeft = 0;
     }
 
     leftEye.style.paddingTop = leftEyePaddingTop + "px";
@@ -52,6 +59,7 @@ const userInputBlur = () => {
     rightEyePaddingTop--;
     rightEyeLeft++;
   }, 10);
+
 };
 
 const userKeyHandler = (event) => {
